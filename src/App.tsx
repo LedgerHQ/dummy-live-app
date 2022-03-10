@@ -40,7 +40,7 @@ const App = () => {
     }
     const action = await api.current.requestAccount().catch(error => console.error({ error }));
     console.log({ action });
-    setOutput(action)
+    setOutput(action);
   };
   
   const verifyAddress = async () => {
@@ -48,7 +48,7 @@ const App = () => {
       return;
     }
     const action = await api.current.receive("mock:1:bitcoin:true_bitcoin_0:");
-    setOutput(action)
+    setOutput(action);
   };
   
   const signTransaction = async () => {
@@ -95,7 +95,7 @@ const App = () => {
             Request account
           </button>
           <button onClick={verifyAddress} data-test-id="verify-address-button">
-            Verify Address (Not yet implemented)
+            Verify Address
           </button>
           <button onClick={signTransaction} data-test-id="sign-transaction-button">
             Sign Transaction (Not yet implemented)
